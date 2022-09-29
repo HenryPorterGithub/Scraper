@@ -1,6 +1,20 @@
 # Scraper
 A ReactJS SPA + ASP.NET Core Web API Pair for Scraping Google Results
 
+# Testing
+I tested this project locally and on a second device after cloning from GitHub, and it worked for me in both scenarios. It does not include unit tests but they can be added if desired.
+
+# Usage
+Clone this project to visual studio using the "Code" dropdown in GitHub.
+Run the API program and you will see the OpenAPI interface. Verify that the API call itself works.
+Run the Scraper program (ReactJS SPA) and wait as npm restores the react dependencies locally. This may take a long time.
+You will see a basic user interface which you can use to call the API via proxy. The result will be written to the screen.
+If you spam the scrape button you can cause your IP to be temporarily blocked with a captcha on future scrapes.
+Because it uses a proxy there is no need to be concerned with CORS issues.
+There are no local files or DLLs to reference so no issues there.
+You can configure the solution to use two startup projects, the API loading first and React loading second, but the API loads slower so it's best to start them individually.
+If the API loads second, the ReactJS UI will error on scrape and display the error on screen.
+
 # Documentation
 No 3rd party libraries are used in any part of this project.
 
@@ -17,7 +31,6 @@ The ReactJS SPA is very simple, and unstyled. It allowes you to input your param
 This prevents the issues you would normally experience due to CORS security limitations.
 
 # Commentary
-
 Search Engine Optimization is not my speciality, but if I were to embark on this project I would do things a little differently.
 I would create an Azure function or application service to perform the scraping operation daily and save the results to a database.
 Then, I would create a PowerBI online workspace which the CEO has access to. Here he could view all of the data relating to SEO, not just the Google scrape. This would avoid the tedium of the CEO having to interact with this tool. It is also a good example of automation, a CI/CD principle. I have built many automated release pipelines which include automated smoke testing, as well as Katalon-based system test and unit tests. Fully-fledged TDD is another area where I have experience that could be relevant to InfoTrack; in our largest TDD project we actually began by building the unit tests themselves, rather than the code itself.
@@ -41,7 +54,7 @@ PWA -
 I am not surprised to see an SEO score of 100, I spotted many of the green flags there when I inspected your page source prior to our intial interview. You do not have a progressive web app option which is fine, there is no need for it in this context, but I have created them before. They are the latest development in SaaS delivery. The Lighthouse tool has an itemized list of remedial actions you could take which would directly improve your results in the Google scrape, but not necessarily instantly. With a proper PowerBI/SQL tracking system in place you could see what effect your code changes would have on your search ratings over time.
 
 # Off-Site SEO
-This is not my speciality, but I have been led to understand it is more important than on-site SEO, and much more difficult. Google significantly improves the rankings of websites if they are linked to by other sites with high rankings. Links from sites with poor rankings has a deleterious effect. Professional SEO consultants will use scrapers to obtain the email addresses of bloggers, hundreds or thousands of them, and contact them asking for their site to be discussed in one of their articles. Your Digital Conveyancing Summit is a superior method of improving your Off-Site SEO ratings, so you should be strong in that regard. Social media is another good option to pursue here. I see that Infotrack Australia has an Instagram account, but I can't see one for the UK. A social media manager with the proper tools for releasing optimized, sharable content on a schedule is the best approach to take in this regard. I hear there are newer and more fashionable social media platforms available now even than Instagram, but frankly, I have absolutely no idea what they are or how they work.
+This is not my speciality, but I have been led to understand it is more important than on-site SEO, and much more difficult. Google significantly improves the rankings of websites if they are linked to by other sites with high rankings. Links from sites with poor rankings has a deleterious effect. Professional SEO consultants will use scrapers to obtain the email addresses of bloggers, hundreds or thousands of them, and contact them asking for their site to be discussed in one of their articles. Your Digital Conveyancing Summit is a superior method of improving your Off-Site SEO ratings, so you should be strong in that regard. Social media is another good option to pursue here. I see that Infotrack Australia has an Instagram account, but I can't see one for the UK. A social media manager with the proper tools for releasing optimized, sharable content on a schedule is the best approach to take in this regard. I hear there are even newer and more fashionable social media platforms available now than Instagram, but frankly, I have absolutely no idea what they are or how they work.
 
 # robots.txt
-It may seem obvious, but if the CEO were asking me for this tool I would quickly check to see what is written on our robots.txt, just to see if any rule written there could be blocking legitimate search engine robots. It is also possible for legitimate robots to fall foul of IP-blocking security provisions. This would undermine our ratings simply because it would prevent those robots from building a site map. You can upload your own sitemap to accelerate them.
+It may seem obvious, but if the CEO were asking me for this tool I would quickly check to see what is written on our robots.txt, just to see if any rule written there could be blocking legitimate search engine robots. It is also possible for legitimate robots to fall foul of IP-blocking security provisions. This would undermine our ratings simply because it would prevent those robots from building a site map. We can upload our own sitemap to accelerate them.
