@@ -1,9 +1,6 @@
 # Scraper
 A ReactJS SPA + ASP.NET Core Web API Pair for Scraping Google Results
 
-# Testing
-I tested this project locally and on a second device after cloning from GitHub, and it worked for me in both scenarios. It does not include unit tests but they can be added if desired.
-
 # Usage
 Clone this project to visual studio using the "Code" dropdown in GitHub.
 Run the API program and you will see the OpenAPI interface. Verify that the API call itself works.
@@ -11,9 +8,11 @@ Run the Scraper program (ReactJS SPA) and wait as npm restores the react depende
 You will see a basic user interface which you can use to call the API via proxy. The result will be written to the screen.
 If you spam the scrape button you can cause your IP to be temporarily blocked with a captcha on future scrapes.
 Because it uses a proxy there is no need to be concerned with CORS issues.
-There are no local files or DLLs to reference so no issues there.
-You can configure the solution to use two startup projects, the API loading first and React loading second, but the API loads slower so it's best to start them individually.
-If the API loads second, the ReactJS UI will error on scrape and display the error on screen.
+You will see many changes files in Git Changes in Visual Studio. These can eventually be added to gitIgnore; they are locally generated on build and therefore not needed in source control.
+
+# Testing
+I tested this project locally and on a second device after cloning from GitHub, and it worked for me in both scenarios. It does not include unit tests but they can be added if desired.
+I solved an ESLint bug caused by create-react-app by using the npm dedupe --save command. This was not a bug caused by my code, but something inherent to create-react-app itself; it was present in an unchanged new react solution. It presents as a conflict declaration for that npm package. I do not think you will experience it but if you do, you can do the same dedupe command to resolve it.
 
 # Documentation
 No 3rd party libraries are used in any part of this project.
@@ -57,4 +56,4 @@ I am not surprised to see an SEO score of 100, I spotted many of the green flags
 This is not my speciality, but I have been led to understand it is more important than on-site SEO, and much more difficult. Google significantly improves the rankings of websites if they are linked to by other sites with high rankings. Links from sites with poor rankings has a deleterious effect. Professional SEO consultants will use scrapers to obtain the email addresses of bloggers, hundreds or thousands of them, and contact them asking for their site to be discussed in one of their articles. Your Digital Conveyancing Summit is a superior method of improving your Off-Site SEO ratings, so you should be strong in that regard. Social media is another good option to pursue here. I see that Infotrack Australia has an Instagram account, but I can't see one for the UK. A social media manager with the proper tools for releasing optimized, sharable content on a schedule is the best approach to take in this regard. I hear there are even newer and more fashionable social media platforms available now than Instagram, but frankly, I have absolutely no idea what they are or how they work.
 
 # robots.txt
-It may seem obvious, but if the CEO were asking me for this tool I would quickly check to see what is written on our robots.txt, just to see if any rule written there could be blocking legitimate search engine robots. It is also possible for legitimate robots to fall foul of IP-blocking security provisions. This would undermine our ratings simply because it would prevent those robots from building a site map. We can upload our own sitemap to accelerate them.
+It may seem obvious, but if the CEO were asking me for this tool I would quickly check our robots.txt, just to see if any rule written there could be blocking legitimate search engine robots. It is also possible for legitimate robots to fall foul of IP-blocking security provisions. This would undermine our ratings simply because it would prevent those robots from building a site map. We can upload our own sitemap to accelerate them.
